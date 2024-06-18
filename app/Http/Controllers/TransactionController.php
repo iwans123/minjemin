@@ -18,7 +18,8 @@ class TransactionController extends Controller
     {
         return view('transaction.index', [
             "transactions" => Transaction::get(),
-            "employees" => User::role('user')->get(),
+            "employeesLow" => User::role('user')->where('position', 'low')->get(),
+            "employeesHigh" => User::role('user')->where('position', 'high')->get(),
             "vehicles" => Vehicle::where('status', 'ready')->get()
         ]);
     }

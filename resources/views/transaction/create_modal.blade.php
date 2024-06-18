@@ -62,7 +62,7 @@
                         <select id="verivikator1" class="form-select" aria-label="Default select example"
                             name="userLow_id" required>
                             {{-- <option selected>...</option> --}}
-                            @foreach ($employees as $employee)
+                            @foreach ($employeesLow as $employee)
                                 <option value="{{ $employee->id }}">{{ $employee->name }}
                                     <span class="text-muted">--{{ $employee->position }}</span>
                                 </option>
@@ -74,7 +74,7 @@
                         <select id="verivikator2" class="form-select" aria-label="Default select example"
                             name="userHigh_id" required>
                             {{-- <option selected>...</option> --}}
-                            @foreach ($employees as $employee)
+                            @foreach ($employeesHigh as $employee)
                                 <option value="{{ $employee->id }}">{{ $employee->name }}
                                     <span class="text-muted">--{{ $employee->position }}</span>
                                 </option>
